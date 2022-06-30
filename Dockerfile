@@ -15,5 +15,6 @@ RUN pip3 install scipy-1.10.0.dev0+1345.b103550-cp311-cp311-linux_x86_64.whl
 RUN git clone https://github.com/scikit-learn/scikit-learn.git && cd /scikit-learn && git checkout tags/0.21.3
 
 RUN cd /scikit-learn && python3 setup.py bdist_wheel
+RUN mkdir -p /data/sklearn
 
 CMD ["/bin/sh", "-c", "cp -r /scikit-learn/dist /data/sklearn && cp /usr/lib/libopenblas.so /data/sklearn/libopenblas.so"]
