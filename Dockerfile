@@ -1,6 +1,6 @@
 FROM python:3.11.0b3-alpine3.15
 
-RUN apk add --no-cache --virtual=.build-dependencies g++ gfortrant file binutils musl-dev openblas-dev
+RUN apk add --no-cache --virtual=.build-dependencies g++ gfortran file binutils musl-dev openblas-dev
 RUN apk add libstdc++ openblas git
 RUN ln -s locale.h /usr/include/xlocale.h
 
