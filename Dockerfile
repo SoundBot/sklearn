@@ -4,7 +4,7 @@ RUN apk add --no-cache --virtual=.build-dependencies g++ gfortrant file binutils
 RUN apk add libstdc++ openblas git
 RUN ln -s locale.h /usr/include/xlocale.h
 
-RIN pip3 install cython
+RUN pip3 install cython
 
 ADD numpy-1.22.3-cp311-cp311-linux_x86_64.whl numpy-1.22.3-cp311-cp311-linux_x86_64.whl
 ADD scipy 
